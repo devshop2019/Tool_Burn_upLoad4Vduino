@@ -1,0 +1,19 @@
+c#-run command prompt commands from within a C# application
+
+https://www.youtube.com/watch?v=HeHR9q-IWF8
+
+
+
+burn Boot
+
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -cusbasp -Pusb -e -Ulock:w:0x3F:m -Uefuse:w:0xFD:m -Uhfuse:w:0xDE:m -Ulfuse:w:0xFF:m
+
+
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -cusbasp -Pusb -Uflash:w:D:\hshopProgram\IDE\arduino-1.8.9\hardware\arduino\avr/bootloaders/optiboot/optiboot_atmega328.hex:i -Ulock:w:0x0F:m
+
+nap
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM4 -b115200 -D -Uflash:w:C:\Users\ADMINI~1\AppData\Local\Temp\arduino_build_996873/Blink.ino.hex:i
+
+D:\hshopProgram\Tool\Tool_machNap\XLoader\Vietduino/Test_chap_io_uno.ino.hex:i
+
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM4 -b115200 -D -Uflash:w:D:\hshopProgram\Tool\Tool_machNap\XLoader\Vietduino/Test_chap_io_uno.ino.hex:i
