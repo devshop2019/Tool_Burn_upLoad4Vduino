@@ -3,17 +3,59 @@ c#-run command prompt commands from within a C# application
 https://www.youtube.com/watch?v=HeHR9q-IWF8
 
 
+https://www.ladyada.net/learn/avr/avrdude.html
+***m2560 = ATMEGA2560 [C:\WinAVR\bin\avrdude.conf:8718]
+
 
 burn Boot
 
 D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -cusbasp -Pusb -e -Ulock:w:0x3F:m -Uefuse:w:0xFD:m -Uhfuse:w:0xDE:m -Ulfuse:w:0xFF:m
 
-
 D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -cusbasp -Pusb -Uflash:w:D:\hshopProgram\IDE\arduino-1.8.9\hardware\arduino\avr/bootloaders/optiboot/optiboot_atmega328.hex:i -Ulock:w:0x0F:m
 
-nap
+**** Dung USBASB nap nhung van co bootloader: D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -cusbasp -Pusb -Uflash:w:C:\Users\Administrator\AppData\Local\Temp\arduino_build_996873/Blink.ino.with_bootloader.hex:i -Ulock:w:0x0F:m
+
+nap Upload:
 D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM4 -b115200 -D -Uflash:w:C:\Users\ADMINI~1\AppData\Local\Temp\arduino_build_996873/Blink.ino.hex:i
 
 D:\hshopProgram\Tool\Tool_machNap\XLoader\Vietduino/Test_chap_io_uno.ino.hex:i
 
 D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM4 -b115200 -D -Uflash:w:D:\hshopProgram\Tool\Tool_machNap\XLoader\Vietduino/Test_chap_io_uno.ino.hex:i
+
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega2560 -cwiring -PCOM4 -b115200 -D -Uflash:w:C:\Users\ADMINI~1\AppData\Local\Temp\arduino_build_996873/Blink.ino.hex:i
+
+
+##################################### Arduino command Line: ######################################################
+
+Tham khao them: 
+	- <c# resource exe inside exe> 	https://stackoverflow.com/questions/15470090/run-exe-file-as-an-embedded-resource-in-c-sharp
+
+Xem theo: 
+	- https://www.youtube.com/watch?v=8LPSjucQoso  
+	- https://github.com/arduino/arduino-cli
+
+B1:	replacing <DATE> with format YYYYMMDD (i.e for 2019/Aug/06 use 20190806)
+	- Windows 64 bit: https://downloads.arduino.cc/arduino-cli/nightly/arduino-cli_nightly-<DATE>_Windows_64bit.zip
+	- Windows 32 bit: https://downloads.arduino.cc/arduino-cli/nightly/arduino-cli_nightly-<DATE>_Windows_32bit.zip
+	
+B2: Cach su dung:(CMD vao thu mua chua arduino-cli.exe)
+	- Co the chi lam 1 lan:
+		- arduino-cli core install arduino:avr
+		
+	- Them sketch:
+		- arduino-cli sketch new MyFirstSketch_kxn
+		* file .ino se dc luu trong /Documents/Arduino
+		
+	- Kiem tra board dang ket noi
+		- arduino-cli board list 
+		
+	- Bien dich
+		- arduino-cli compile --fqbn arduino:avr:uno C:\Users\Administrator\Documents\Arduino\MyFirstSketch_kxn
+	- Upload: 
+		- arduino-cli upload -p COM21 --fqbn arduino:avr:uno C:\Users\Administrator\Documents\Arduino\MyFirstSketch_kxn
+		
+Luu y:
+	- What is the FQBN for ...?
+		Arduino UNO: arduino:avr:uno
+		Arduino Mega: arduino:avr:mega
+		Arduino Nano: arduino:avr:nano or arduino:avr:nano:cpu=atmega328old if you have the old bootloader
