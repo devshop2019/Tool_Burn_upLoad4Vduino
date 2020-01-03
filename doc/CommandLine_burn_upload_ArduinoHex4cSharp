@@ -59,3 +59,14 @@ Luu y:
 		Arduino UNO: arduino:avr:uno
 		Arduino Mega: arduino:avr:mega
 		Arduino Nano: arduino:avr:nano or arduino:avr:nano:cpu=atmega328old if you have the old bootloader
+		
+===================== GrovePi===========================
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -cusbasp -Pusb -e -Ulock:w:0x3F:m -Uefuse:w:0xFD:m -Uhfuse:w:0xDA:m -Ulfuse:w:0xFF:m
+
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -cusbasp -Pusb -Uflash:w:C:\Users\Administrator\Desktop\Hshop\kkkk\GIT\grove\GrovePi\Firmware/grove_pi_firmware.hex:i -Ulock:w:0x0F:m
+
+====================Flash 16u2 MEga2560=================
+
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega16U2 -cusbasp -Pusb -Uflash:r:C:\Users\Administrator\Desktop\Hshop\kkkk\GIT/n2019_0301_uno_16u2_firmware.hex:i -Ulock:w:0x0F:m
+
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega16U2 -cusbasp -Pusb -Uflash:w:C:\Users\Administrator\Desktop\Hshop\kkkk\GIT/Genuino_COMBINED_dfu_usbserial_atmega16u2_Uno_R3.hex:i -Ulock:w:0x0F:m
