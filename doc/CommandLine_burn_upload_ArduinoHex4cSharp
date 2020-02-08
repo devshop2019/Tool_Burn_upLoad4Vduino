@@ -71,3 +71,9 @@ D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgr
 
 D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega16U2 -cusbasp -Pusb -Uflash:w:C:\Users\Administrator\Desktop\Hshop\kkkk\GIT/Genuino_COMBINED_dfu_usbserial_atmega16u2_Uno_R3.hex:i -Ulock:w:0x0F:m
 D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega16U2 -cusbasp -Pusb -Uflash:w:C:\Users\Administrator\Desktop\Hshop\kkkk\GIT/Arduino-COMBINED-dfu-usbserial-atmega16u2-Uno-Rev3.hex:i -Ulock:w:0x0F:m
+
+-------------
+https://www.arduino.cc/en/Hacking/DFUProgramming8U2
+
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega8U2 -cusbasp -Pusb -Uflash:w:C:\Users\Administrator\Desktop\Hshop\kkkk\GIT\devshop2019\Tool_Burn_upLoad4Vduino\firmware\arduino/Arduino-usbserial-mega.hex:i -Ulock:w:0x0F:m
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega8U2 -cusbasp -Pusb -Uflash:w:C:\Users\Administrator\Desktop\Hshop\kkkk\GIT\devshop2019\Tool_Burn_upLoad4Vduino\firmware\arduino/Arduino-usbserial-uno.hex:i -Ulock:w:0x0F:m
