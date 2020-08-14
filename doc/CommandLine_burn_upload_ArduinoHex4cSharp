@@ -66,6 +66,8 @@ D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgr
 D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -cusbasp -Pusb -Uflash:w:C:\Users\Administrator\Desktop\Hshop\kkkk\GIT\grove\GrovePi\Firmware/grove_pi_firmware.hex:i -Ulock:w:0x0F:m
 
 ====================Flash 16u2 MEga2560=================
+***fusebit for 16u2 tren Uno va Mega2560
+D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega16U2 -cusbasp -Pusb -e -Ulock:w:0x3F:m -Uefuse:w:0xF4:m -Uhfuse:w:0xD9:m -Ulfuse:w:0xFF:m
 
 D:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/bin/avrdude -CD:\hshopProgram\IDE\arduino-1.8.9\hardware\tools\avr/etc/avrdude.conf -v -patmega16U2 -cusbasp -Pusb -Uflash:r:C:\Users\Administrator\Desktop\Hshop\kkkk\GIT/n2019_0301_uno_16u2_firmware.hex:i -Ulock:w:0x0F:m
 
